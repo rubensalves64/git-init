@@ -1,0 +1,26 @@
+.wrapper{
+    max-width: 70rem;
+    margin: 2rem auto;
+    padding: 0 1rem;
+ 
+    display: grid;
+    /*aqui  abaixo mostrar que a primeira coluna vai ter um largura fixa de 256px
+    enquanto a segunda vai permancer flexivel ao tamanho da tela*/
+    grid-template-columns: 256px 1fr;
+    gap: 2rem;
+    /*o flex start aqui nesse faz com que aside bar nao se comprimar ao tamanho da 
+    outra div e permanneça sempre em cima*/
+    align-items: flex-start;
+ }
+ @media(max-width: 768px){
+    html{
+        /*16 -> 100%
+          14 -> x*/
+        font-size:87.5%;
+    }
+.wrapper{
+    /* indica que quando chegar a menor que essa quantidade pixels ele vai 
+    ficar em uma so coluna*/
+    grid-template-columns: 1fr;
+}
+ }
